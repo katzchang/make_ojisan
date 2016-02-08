@@ -2,12 +2,12 @@
 
 
 all: main
-	./main
+	./$<
 
-main : lib.o main.o
+main: lib.o main.o
 	gcc -o $@ $^
 
-%.o : %.c
+%.o: %.c
 	gcc -o $@ -c $<
 
 clean:
